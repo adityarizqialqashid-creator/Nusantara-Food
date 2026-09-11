@@ -1,0 +1,10 @@
+{
+  "name": "Nusantara Food",
+  "short_name": "Nusantara Food",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#fffaf5",
+  "theme_color": "#f06c2d",
+  "orientation": "portrait",
+  "description": "Aplikasi penjualan makanan Nusantara Food"
+}

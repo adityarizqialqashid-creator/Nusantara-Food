@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Nusantara Food</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#f06c2d">
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="logo">
+            🍜 Nusantara<span>Food</span>
+        </div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#menu">Menu</a>
+            <a href="#promo">Promo</a>
+            <a href="#about">Tentang</a>
+        </nav>
+
+        <button class="cart-btn" onclick="openCart()">
+            🛒 <span id="cart-count">0</span>
+        </button>
+    </header>
+
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+
+        <div class="hero-text">
+            <p class="small-title">🍴 MAKAN ENAK, HARGA BERSAHABAT</p>
+
+            <h1>
+                Nikmati Makanan
+                <span>Favoritmu</span>
+            </h1>
+
+            <p>
+                Pesan makanan favoritmu dengan mudah.
+                Pilihan lezat, harga terjangkau, dan siap
+                menemani harimu.
+            </p>
+
+            <a href="#menu" class="main-btn">
+                Lihat Menu →
+            </a>
+        </div>
+
+        <div class="hero-food">
+            🍛
+        </div>
+
+    </section>
+
+
+    <!-- CATEGORY -->
+    <section class="category">
+
+        <h2>Pilih Sesuai Selera</h2>
+
+        <div class="category-container">
+
+            <button onclick="filterFood('all')">
+                🍽️ Semua
+            </button>
+
+            <button onclick="filterFood('makanan')">
+                🍛 Makanan
+            </button>
+
+            <button onclick="filterFood('snack')">
+                🍟 Snack
+            </button>
+
+            <button onclick="filterFood('minuman')">
+                🥤 Minuman
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- MENU -->
+    <section class="menu" id="menu">
+
+        <div class="section-title">
+            <p>MENU KAMI</p>
+            <h2>Favorit Pelanggan</h2>
+        </div>
+
+
+        <div class="products">
+
+            <!-- PRODUK 1 -->
+            <div class="card makanan">
+
+                <div class="food-image">
+                    🍗
+                </div>
+
+                <div class="card-content">
+
+                    <span class="tag">
+                        Best Seller
+                    </span>
+
+                    <h3>Ayam Crispy</h3>
+
+                    <p>
+                        Ayam crispy renyah dengan
+                        bumbu spesial.
+                    </p>
+
+                    <div class="card-bottom">
+
+                        <strong>
+                            Rp18.000
+                        </strong>
+
+                        <button
+                            onclick="addToCart('Ayam Crispy', 18000)">
+                            +
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUK 2 -->
+            <div class="card makanan">
+
+                <div class="food-image">
+                    🍜
+                </div>
+
+                <div class="card-content">
+
+                    <span class="tag">
+                        Favorit
+                    </span>
+
+                    <h3>Mie Pedas</h3>
+
+                    <p>
+                        Mie dengan bumbu pedas
+                        yang menggugah selera.
+                    </p>
+
+                    <div class="card-bottom">
+
+                        <strong>
+                            Rp15.000
+                        </strong>
+
+                        <button
+                            onclick="addToCart('Mie Pedas', 15000)">
+                            +
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUK 3 -->
+            <div class="card makanan">
+
+                <div class="food-image">
+                    🍔
+                </div>
+
+                <div class="card-content">
+
+                    <span class="tag">
+                        Baru
+                    </span>
+
+                    <h3>Chicken Burger</h3>
+
+                    <p>
+                        Burger ayam dengan sayuran
+                        dan saus spesial.
+                    </p>
+
+                    <div class="card-bottom">
+
+                        <strong>
+                            Rp20.000
+                        </strong>
+
+                        <button
+                            onclick="addToCart('Chicken Burger', 20000)">
+                            +
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUK 4 -->
+            <div class="card snack">
+
+                <div class="food-image">
+                    🍟
+                </div>
+
+                <div class="card-content">
+
+                    <span class="tag">
+                        Snack
+                    </span>
+
+                    <h3>French Fries</h3>
+
+                    <p>
+                        Kentang goreng renyah
+                        dengan saus pilihan.
+                    </p>
+
+                    <div class="card-bottom">
+
+                        <strong>
+                            Rp10.000
+                        </strong>
+
+                        <button
+                            onclick="addToCart('French Fries', 10000)">
+                            +
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUK 5 -->
+            <div class="card minuman">
+
+                <div class="food-image">
+                    🥤
+                </div>
+
+                <div class="card-content">
+
+                    <span class="tag">
+                        Minuman
+                    </span>
+
+                    <h3>Es Teh</h3>
+
+                    <p>
+                        Es teh manis segar untuk
+                        menemani makananmu.
+                    </p>
+
+                    <div class="card-bottom">
+
+                        <strong>
+                            Rp5.000
+                        </strong>
+
+                        <button
+                            onclick="addToCart('Es Teh', 5000)">
+                            +
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUK 6 -->
+            <div class="card minuman">
+
+                <div class="food-image">
+                    🥛
+                </div>
+
+                <div class="card-content">
+
+                    <span class="tag">
+                        Minuman
+                    </span>
+
+                    <h3>Milkshake</h3>
+
+                    <p>
+                        Milkshake lembut dengan
+                        rasa cokelat.
+                    </p>
+
+                    <div class="card-bottom">
+
+                        <strong>
+                            Rp12.000
+                        </strong>
+
+                        <button
+                            onclick="addToCart('Milkshake', 12000)">
+                            +
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PROMO -->
+    <section class="promo" id="promo">
+
+        <div>
+            <p>PROMO HARI INI 🎉</p>
+
+            <h2>
+                Diskon 20% untuk pembelian
+                minimal Rp50.000
+            </h2>
+
+            <p>
+                Jangan sampai kelewatan!
+            </p>
+        </div>
+
+        <div class="promo-icon">
+            🏷️
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+    <section class="about" id="about">
+
+        <div class="about-icon">
+            🍽️
+        </div>
+
+        <div>
+
+            <p class="small-title">
+                TENTANG KAMI
+            </p>
+
+            <h2>
+                Makanan Lezat,
+                Harga Bersahabat
+            </h2>
+
+            <p>
+                Nusantara Food menyediakan berbagai
+                makanan dan minuman yang cocok untuk
+                menemani aktivitas sehari-hari.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="logo">
+            🍜 Nusantara<span>Food</span>
+        </div>
+
+        <p>
+            © 2026 Nusantara Food. All rights reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- CART POPUP -->
+    <div class="cart-overlay" id="cart">
+
+        <div class="cart-box">
+
+            <button class="close"
+                onclick="closeCart()">×</button>
+
+            <h2>🛒 Keranjang</h2>
+
+            <div id="cart-items">
+                <p class="empty">
+                    Keranjang masih kosong.
+                </p>
+            </div>
+
+            <div class="cart-total">
+
+                <span>Total</span>
+
+                <strong id="cart-total">
+                    Rp0
+                </strong>
+
+            </div>
+
+            <button class="checkout"
+                onclick="checkout()">
+                Pesan Sekarang
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
